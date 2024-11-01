@@ -260,7 +260,7 @@ button {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #ffffff;
+    color: #3072c7;
     text-align: right;
     text-align: center;
 }
@@ -276,7 +276,9 @@ button {
 .padding_right0 {
     padding-right: 5px;
 }
-
+a.selected{
+    background-color: blue;
+}
 
 /* header top section end */
 
