@@ -46,8 +46,8 @@
                <div class="col-sm-12">
                   <div class="header_top_main">
                      <div class="call_text"><a href="#"><span class="padding_right0"><i class="fa fa-phone" aria-hidden="true"></i></span>  Call : +01 1234567890</a></div>
-                     <div class="call_text_2"><a href="#"><span class="padding_right0"><i class="fa fa-envelope" aria-hidden="true"></i></span> demo@gmail.com</a></div>
-                     <div class="call_text_1"><a href="#"><span class="padding_right0"><i class="fa fa-map-user" aria-hidden="true"></i></span> <?= $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ?></div>
+                     <div class="call_text_2"><a href="mailto:demo@gmail.com"><span class="padding_right0"><i class="fa fa-envelope" aria-hidden="true"></i></span> demo@gmail.com</a></div>
+                     <div class="call_text_1"><a href="belepes"><span class="padding_right0"><i class="fa fa-map-user" aria-hidden="true"></i></span> <?php if(isset($_SESSION['userlastname'])) echo $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ; else echo  "Lépjen be!"; ?></a></div>
                   </div>
                </div>
             </div>
@@ -68,7 +68,7 @@
                 <!--?php echo Menu::getMenu2($viewData['selectedItems']); ?-->
                 <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="nyitolap">Nyitólap</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
