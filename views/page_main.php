@@ -47,7 +47,8 @@
                   <div class="header_top_main">
                      <div class="call_text"><a href="#"><span class="padding_right0"><i class="fa fa-phone" aria-hidden="true"></i></span>  Call : +01 1234567890</a></div>
                      <div class="call_text_2"><a href="mailto:demo@gmail.com"><span class="padding_right0"><i class="fa fa-envelope" aria-hidden="true"></i></span> demo@gmail.com</a></div>
-                     <div class="call_text_1"><a href="belepes"><span class="padding_right0"><i class="fa fa-map-user" aria-hidden="true"></i></span> <?php if(isset($_SESSION['userlastname'])) echo $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ; else echo  "Lépjen be!"; ?></a></div>
+                     <div class="call_text_1"><a href="belepes"><span class="padding_right0"><i class="fa fa-map-user" aria-hidden="true"></i>
+                  </span> <?php if(($_SESSION['userlastname'])<>"") echo $_SESSION['userlastname']." ".$_SESSION['userfirstname'] ; else echo  "Lépjen be!"; ?></a></div>
                   </div>
                </div>
             </div>
