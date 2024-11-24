@@ -1,6 +1,6 @@
 <div class="about_section layout_padding margim_90">
          <div class="container">
-                  <h1>Munkáink</h1>
+                  <h1>Munkáink (SOAP kliens)</h1>
                   <?php
 $options=array('uri' => 'http://localhost/web2/szerver/soapServer.php',
  'location' => 'http://localhost/web2/szerver/soapServer.php',
