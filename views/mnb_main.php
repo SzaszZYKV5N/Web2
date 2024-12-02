@@ -6,8 +6,6 @@
 <div class="row">
 <div class="col-md-6">
 
-
-
 <table style:border=1>
 
 <form action=# method=post>
@@ -153,8 +151,9 @@ if(isset($_POST['kirajzol']))
 //{
     $xek = "";
     $yok = "";
-    //$objClient = new SoapClient("http://www.mnb.hu/arfolyamok.asmx?WSDL", array('trace' => true));
-    $currrates = $objClient->GetExchangeRates(array('startDate' => $_POST['datumtol'], 'endDate' => $_POST['datumig'], 'currencyNames' => $_POST['egyik']))->GetExchangeRatesResult;
+    $objClient = new SoapClient("http://www.mnb.hu/arfolyamok.asmx?WSDL", array('trace' => true));
+    $currrates = $objClient->GetExchangeRates(array('startDate' => $_POST['datumtol'], 
+    'endDate' => $_POST['datumig'], 'currencyNames' => $_POST['egyik']))->GetExchangeRatesResult;
     $dom_root = new DOMDocument();
     $dom_root->loadXML($currrates);
     
@@ -169,7 +168,6 @@ if(isset($_POST['kirajzol']))
        
 
             $yok .= str_replace(",",".",$rate->nodeValue) . ",";
-
            
         }
         

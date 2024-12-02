@@ -3,10 +3,6 @@
 <h2><span>Napi árfolyamok</span></h2>
 <?php 
 
-
-
-echo "<br>GetCurrentExchangeRates()<br>"; 
-
 $objClient = new SoapClient("http://www.mnb.hu/arfolyamok.asmx?WSDL", array('trace' => true));
 $currrates = $objClient->GetCurrentExchangeRates()->GetCurrentExchangeRatesResult;
 
