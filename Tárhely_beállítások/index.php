@@ -2,7 +2,7 @@
 <?php
 
 //alkalmaz�s gy�k�r k�nyvt�ra a szerveren
-//define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT'].'/web2/');
+
 define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT'].'/web2/');
 
 //URL c�m az alkalmaz�s gy�ker�hez

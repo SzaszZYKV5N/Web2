@@ -4,6 +4,7 @@
     define('USER', 'zykv5n');
     define('PASSWORD', 'Nhelyjelszo_71');
     
+    
     class Database {
         private static $connection = FALSE;
         
