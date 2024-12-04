@@ -2,7 +2,7 @@
 
 class Restkliens_Controller
 {
-	public $baseName = 'restKliens'; 
+	public $baseName = 'restkliens'; 
 	public function main(array $vars) 
 	{
 		

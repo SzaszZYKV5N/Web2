@@ -1,8 +1,8 @@
 <?php
 
-class Mnb_napi_Controller
+class MNB_napi_Controller
 {
-	public $baseName = 'mnb_napi'; 
+	public $baseName = 'MNB_napi'; 
 	public function main(array $vars) 
 	{
 		

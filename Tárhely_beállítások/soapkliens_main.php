@@ -2,9 +2,12 @@
          <div class="container">
                   <h1>Munkáink (SOAP kliens)</h1>
                   <?php
-$options=array('uri' => 'http://zykv5n.nhely.hu/szerver/soapserver.php',
- 'location' => 'http://zykv5n.nhely.hu/szerver/soapserver.php',
- //keep_alive => true
+$options=array('uri' => 'http://www.zykv5n.nhely.hu/szerver/soapserver.php',
+ 'location' => 'http://www.zykv5n.nhely.hu/szerver/soapserver.php',
+ 'keep_alive' => false,
+ 'trace' =>true,
+'connection_timeout' => 5000,
+'cache_wsdl' => WSDL_CACHE_NONE,
 );
 try{
     $kliens=new SoapClient(null,$options);

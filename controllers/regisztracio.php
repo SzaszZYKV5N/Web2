@@ -1,8 +1,8 @@
 <?php
 
-class Soapkliens_Controller
+class Regisztracio_Controller
 {
-	public $baseName = 'soapkliens'; 
+	public $baseName = 'regisztracio';  
 	public function main(array $vars) 
 	{
 		

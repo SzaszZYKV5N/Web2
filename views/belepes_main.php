@@ -5,3 +5,4 @@
     <input type="submit" value="Küldés">
 </form>
 <h2><br><?= (isset($viewData['uzenet']) ? $viewData['uzenet'] : "") ?><br></h2>
+<a href="<?= SITE_ROOT ?>/regisztracio"> Regisztráció </a>

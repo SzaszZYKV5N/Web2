@@ -1,8 +1,8 @@
 <?php
 
-class Soapkliens_Controller
+class Tcpdf_Controller
 {
-	public $baseName = 'soapkliens'; 
+	public $baseName = 'tcpdf'; 
 	public function main(array $vars) 
 	{
 		
