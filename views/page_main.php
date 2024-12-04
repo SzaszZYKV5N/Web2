@@ -69,16 +69,16 @@
                 <!--?php echo Menu::getMenu2($viewData['selectedItems']); ?-->
                 <ul class="navbar-nav ml-auto">
                      <li class="nav-item active">
-                        <a class="nav-link" href="nyitolap">Nyitólap</a>
+                        <a class="nav-link" href="nyihttp://zykv5n.nhely.hu/nyitolap">Nyitólap</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="http://zykv5n.nhely.hu/elerhetoseg">About</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="treatment.html">Treatment</a>
+                        <a class="nav-link" href="http://zykv5n.nhely.hu/linkek">Treatment</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="doctors.html">Doctors</a>
+                        <a class="nav-link" href="http://zykv5n.nhely.hu/belepes">Doctors</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
