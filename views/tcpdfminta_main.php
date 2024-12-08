@@ -102,7 +102,7 @@ $conn->close();
 
                
                   <h1 class="about_taital">TCPDF minta </h1>
-            
+            <
             
    
 
@@ -148,16 +148,8 @@ $conn->close();
     <?= $eredmenyTabla ?>
    
     <h1>PDF Generálás</h1>
-<?php  require_once('https://sz95789.hosting.atw.co.hu/tcpdfmain/tcpdf.php'); 
-$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
-$pdf->SetCreator(PDF_CREATOR);
-$pdf->SetAuthor('Web-programozás II');
-$pdf->SetTitle('FELHASZNÁLÓK');
-$pdf->SetSubject('Web-programozás II - 3. Labor - TCPDF');
-$pdf->SetKeywords('TCPDF, PDF, Web-programozás II, Labor3');
 
-$pdf->AddPage();
-$kimenet='<html><head></head><body>'.$eredmenytabla.'</body></html>';
-$pdf->writeHTML($kimenet, true, false, true, false, '');
-$pdf->Output('/eredmeny.pdf', 'I');
-?>
+
+
+
+

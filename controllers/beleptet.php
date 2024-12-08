@@ -5,7 +5,7 @@ class Beleptet_Controller
 	public $baseName = 'beleptet';  //meghatározni, hogy melyik oldalon vagyunk
 	public function main(array $vars) // a router által továbbított paramétereket kapja
 	{
-		$beleptetModel = new Beleptet_Model;  //az osztályhoz tartozó modell
+		$beleptetModel = new beleptet_Model;  //az osztályhoz tartozó modell
 		//a modellben belépteti a felhasználót
 		$retData = $beleptetModel->get_data($vars);
 		if($retData['eredmeny'] == "ERROR")

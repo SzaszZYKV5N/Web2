@@ -1,33 +1,26 @@
 <?php
 
-class beleptet_Model
+class Beleptet_Model
 {
 	public function get_data($vars)
 	{
 		$retData['eredmeny'] = "";
 		try {
-			$connection2 = Database::getConnection();
-			$jsz0=$vars['password'];
-			print $jsz0."hhh";
-			$jsz=sha1($jsz0);
-			$neve=$vars['login'];
-			//$jsz=sha1("Login2");
-			//$neve="Login2";
-
-			$sql = "select * from felhasznalok where bejelentkezes='" .$neve."' and jelszo='".$jsz."'";
-			//$sql = "select id, csaladi_nev, utonev, jogosultsag from felhasznalok where bejelentkezes='".$vars['login']."' and jelszo='".sha1($vars['password'])."'";
+			$connection = Database::getConnection();
+			//$sql = "select * from felhasznalok where bejelentkezes='" .$vars['login']."' and jelszo='".sha1($vars['password'])."'";
+			$sql = "select id, csaladi_nev, utonev, jogosultsag from felhasznalok where bejelentkezes='".$vars['login']."' and jelszo='".sha1($vars['password'])."'";
 			//$sql = "select * from felhasznalok where bejelentkezes='" .$vars['login']."' and jelszo='".$vars['password']."'";
-			$stmt = $connection2->query($sql);
+			$stmt = $connection->query($sql);
 			$felhasznalo = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			switch(count($felhasznalo)) {
 				case 0:
 					$retData['eredmeny'] = "ERROR";
-					$retData['uzenet'] = "Helytelen felhasználói név-jelszó pár!  ".$neve." ".$jsz."<br>".$sql;
+					$retData['uzenet'] = "Helytelen felhasználói név-jelszó pár! ";
 					break;
 				case 1:
-					$retData['eredmeny'] = "OK";
+					$retData['eredmény'] = "OK";
 					$retData['uzenet'] = "Kedves ".$felhasznalo[0]['csaladi_nev']." ".$felhasznalo[0]['utonev']."!<br><br>
-					                      Jó munkát kívánunk ".$neve." ".$jsz."<br><br>
+					                      Jó munkát kívánunk rendszerünkkel.<br><br>
 										  Az üzemeltetők";
 					$_SESSION['userid'] =  $felhasznalo[0]['id'];
 					$_SESSION['userlastname'] =  $felhasznalo[0]['csaladi_nev'];
@@ -36,12 +29,12 @@ class beleptet_Model
 					Menu::setMenu();
 					break;
 				default:
-					$retData['eredmeny'] = "ERROR";
+					$retData['eredmény'] = "ERROR";
 					$retData['uzenet'] = "Több felhasználót találtunk a megadott felhasználói név -jelszó párral!";
 			}
 		}
 		catch (PDOException $e) {
-					$retData['eredmeny'] = "ERROR";
+					$retData['eredmény'] = "ERROR";
 					$retData['uzenet'] = "Adatbázis hiba: ".$e->getMessage()."!";
 		}
 		return $retData;

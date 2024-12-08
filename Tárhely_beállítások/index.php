@@ -6,7 +6,7 @@
 define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT']);
 
 //URL c�m az alkalmaz�s gy�ker�hez
-define('SITE_ROOT', 'http://zykv5n.nhely.hu/');
+define('SITE_ROOT', 'http://zykv5n.nethely.hu/');
 
 // a router.php vez�rl� bet�lt�se
 require_once(SERVER_ROOT . 'controllers/' . 'router.php');

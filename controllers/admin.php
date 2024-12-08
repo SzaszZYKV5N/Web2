@@ -1,8 +1,8 @@
 <?php
 
-class Tcpdf_Controller
+class Admin_Controller
 {
-	public $baseName = 'tcpdf'; 
+	public $baseName = 'admin'; 
 	public function main(array $vars) 
 	{
 		
